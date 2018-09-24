@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 
 app.get('/:id', function (req, res) {
-    // First read existing users.
     fs.readFile(__dirname + "/" + "user.json", 'utf8', function (err, data) {
         var users = JSON.parse(data);
         for (var i = 0; i < users.length; i++) {
