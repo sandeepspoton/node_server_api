@@ -15,8 +15,8 @@ app.get('/:id', function (req, res) {
         var users = JSON.parse(data);
         for (var i = 0; i < users.length; i++) {
             if (req.params.id == users[i].id) {
-                console.log(users[i]);
-                res.end("user:", JSON.stringify(users[i]));
+                console.log("user:", users[i]);
+                res.end(JSON.stringify(users[i]));
                 break;
             }
         }
